@@ -25,4 +25,14 @@ public class Headphones extends Product{
                 ", wireless=" + wireless +
                 '}';
     }
+
+    @Override
+    public double getDiscountedPrice() {
+        if (!wireless) {
+            double discount = 0.07;
+            return super.getDiscountedPrice() - super.getDiscountedPrice() * discount;
+        } else {
+            return super.getDiscountedPrice();
+        }
+    }
 }

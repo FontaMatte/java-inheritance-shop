@@ -24,4 +24,15 @@ public class Tv extends Product{
                 ", smart=" + smart +
                 '}';
     }
+
+    @Override
+    public double getDiscountedPrice() {
+        if (!smart) {
+            double discount =  0.1;
+            return super.getDiscountedPrice() - super.getDiscountedPrice() * discount;
+        } else {
+            return super.getDiscountedPrice();
+        }
+
+    }
 }

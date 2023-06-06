@@ -72,6 +72,15 @@ public class Product {
         return String.format("%08d", code);
     }
 
+    public double getDiscountedPrice() {
+        return price;
+    }
+
+    public void fidelityDiscount() {
+            double discount = 0.02;
+            price -= (price * discount);
+    }
+
     @Override
     public String toString() {
         return "Product{" +

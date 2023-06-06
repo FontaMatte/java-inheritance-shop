@@ -25,4 +25,14 @@ public class Smartphone extends Product {
                 ", memory=" + memory +
                 '}';
     }
+
+    @Override
+    public double getDiscountedPrice() {
+        if (memory < 32) {
+            double discount = 0.05;
+            return super.getDiscountedPrice() - super.getDiscountedPrice() * discount;
+        } else {
+            return super.getDiscountedPrice();
+        }
+    }
 }
