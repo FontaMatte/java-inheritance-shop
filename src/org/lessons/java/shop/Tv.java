@@ -19,7 +19,7 @@ public class Tv extends Product{
     }
     @Override
     public String toString() {
-        return "Tv{" +
+        return "Tv{" + super.toString() +
                 "inches=" + inches +
                 ", smart=" + smart +
                 '}';
